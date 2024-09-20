@@ -1,0 +1,10 @@
+{{ if isset $.Site.Params "adsensePublisher" }}
+  <amp-ad 
+    width="{{ .Get "width" }}" 
+    height="{{ .Get "height" }}"
+    type="adsense"
+    data-ad-client="{{ $.Site.Params.adsensePublisher }}"
+    data-ad-slot="{{ .Get "slot" }}"
+    {{ with .Get "layout" }} layout="{{ . }}" {{ end }}> 
+  </amp-ad>
+{{ end }}

@@ -50,3 +50,13 @@ ignoreErrors = ["error-disable-taxonomy"]
   # for details. An example TOML config that uses [ISO
   # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
   # dateFormat = "2006-01-02"
+
+
+# AdSense 
+# Replace with your Publisher ID or comment out the line to disable adsense. 
+# Adsense auto ad is not supported yet. Make an issue if you want to use it.
+adsensePublisher = "ca-pub-1234567890"
+
+# Google Analytics
+# Replace with your tracking ID or comment out the line to disable analytics.
+googleAnalytics = "UA-XXXXXXXX-X" 
