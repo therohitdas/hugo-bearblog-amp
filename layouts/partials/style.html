@@ -1,15 +1,18 @@
-<style>
+<style amp-custom>
   body {
     font-family: Verdana, sans-serif;
+    text-align: left;
+    background-color: #fff;
+    color: #444;
+  }
+
+  html body div.container{
     margin: auto;
     padding: 20px;
     max-width: 720px;
-    text-align: left;
-    background-color: #fff;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.5;
-    color: #444;
   }
 
   h1,
@@ -25,7 +28,11 @@
 
   a {
     color: #3273dc;
-    /*color: #ff5e6c;*/
+    text-decoration: none; /* AMP best practice for links */
+  }
+
+  a:visited {
+    color: #8b6fcb;
   }
 
   .title {
@@ -58,8 +65,22 @@
     width: 100%;
   }
 
-  img {
+  amp-img {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  figure {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  figcaption {
+    font-size: 0.9em;
+    color: #777;
   }
 
   code {
@@ -67,23 +88,17 @@
     background-color: #f2f2f2;
   }
 
+  pre {
+    white-space: pre-wrap;
+  }
+
   pre code {
     color: #222;
     display: block;
     padding: 20px;
-    white-space: pre-wrap;
     font-size: 14px;
     overflow-x: auto;
-  }
-
-  div.highlight pre {
-    background-color: initial;
-    color: initial;
-  }
-
-  div.highlight code {
-    background-color: unset;
-    color: unset;
+    font-family: monospace;
   }
 
   blockquote {
@@ -96,6 +111,16 @@
   footer {
     padding: 25px;
     text-align: center;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
   }
 
   .helptext {
@@ -122,10 +147,7 @@
     flex: 0 0 130px;
   }
 
-  ul.blog-posts li a:visited {
-    color: #8b6fcb;
-  }
-
+  /* Dark Mode Styles (AMP Compatible) */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #333;
@@ -145,6 +167,10 @@
 
     a {
       color: #8cc2dd;
+    }
+
+    a:visited {
+      color: #bca8e7;
     }
 
     code {
@@ -169,5 +195,4 @@
       color: #aaa;
     }
   }
-
 </style>

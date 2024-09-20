@@ -1,5 +1,4 @@
-{{ define "main" }}
-{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+{{ define "main" }} {{ if eq .Type "blog" }}{{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>
 <p>
   <i>
@@ -9,9 +8,7 @@
   </i>
 </p>
 {{ end }}{{ end }}
-<content>
-  {{ .Content }}
-</content>
+<article>{{ .Content }}</article>
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
